@@ -34,6 +34,19 @@
 					<h3>Bruno Lima</h3>
 					<p class="job-title">Front-end Developer<br><span>@ CESAR</span></p>
 				</section>
+				<section class="text-left">
+					<h2>Agenda</h2>
+					<ul>
+						<li><span class="mark">--</span> History</li>
+						<li><span class="mark">--</span> Today</li>
+						<li><span class="mark">--</span> Types</li>
+						<li><span class="mark">--</span> Tooling</li>
+						<li><span class="mark">--</span> Interfaces</li>
+						<li><span class="mark">--</span> Generics</li>
+						<li><span class="mark">--</span> Debugging</li>
+						<li><span class="mark">--</span> and the Future</li>
+					</ul>
+				</section>
 				<section class="text-full-size">
 					<img src="images/ms-and-js.png" alt="Microsoft and JavaScript" class="plain" />
 				</section>
@@ -52,6 +65,10 @@
 				<section class="image-with-subtitle">
 					<img src="images/angular.svg" alt="Angular" class="plain">
 					<h3>Angular <span class="marked">2.0</span></h3>
+				</section>
+				<section class="image-with-subtitle">
+					<img src="images/aurelia.svg" alt="Aurelia" class="plain">
+					<h3>Aurelia <span class="marked">1.0</span></h3>
 				</section>
 				<section>
 					<img src="images/vscode.svg" alt="VS Code" class="editors">
@@ -78,31 +95,82 @@ $ tsc helloworld.ts
 					</code></pre>
 				</section>
 				<section>
-					<pre><code data-trim data-noescape class="typescript">
-class Greeter {
-    greeting: string;
-    constructor(message: string) {
-        this.greeting = message;
-    }
-    greet() {
-        return "Hello, " + this.greeting;
-    }
-}
-
-let greeter = new Greeter("world");
-					</code></pre>
+					<h1>Types</h1>
 				</section>
 				<section>
-					<h1>Types</h1>
+					<pre><code data-trim data-noescape class="typescript">
+let name: string;
+let age: number;
+let isEnabled: boolean;
+let pets: string[];
+let accessories: string | string[];
+let attributes: [string, number];
+let foo: any;
+let unusable: void = undefined;
+let customer: IWarrior;
+
+					</code></pre>
+				</section>
+				<section data-background-image="images/typing.gif">
+					<h1><span class="marked">#</span> demo</h1>
 				</section>
 				<section>
 					<h1>Tooling</h1>
 				</section>
 				<section>
+					<ul class="tooling">
+						<li>Code Help/ Intellisense</li>
+						<li>Refactoring</li>
+						<li>Peek/Go To</li>
+						<li>Find References</li>
+					</ul>
+				</section>
+				<section data-background-image="images/typing.gif">
+					<h1><span class="marked">#</span> demo</h1>
+				</section>
+				<section>
 					<h1>Interfaces</h1>
 				</section>
 				<section>
+					<pre><code data-trim data-noescape class="typescript">
+interface IWarrior {
+	firstName: string;
+	lastName: string;
+	dead?: boolean;
+}
+
+let person: IWarrior = {
+	firstName: 'Ned',
+	lastName: 'Stark'
+}
+					</code></pre>
+				</section>
+				<section data-background-image="images/typing.gif">
+					<h1><span class="marked">#</span> demo</h1>
+				</section>
+				<section>
 					<h1>Generics</h1>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape class="typescript">
+export class FamilyStark&lt;T&gt; {
+	add(member: T) {...}
+}
+
+let starks = new FamilyStark&lt;IWarrior&gt;();
+
+starks.add({
+	firstName: 'Jon',
+	lastName: 'Snow',
+	dead: false
+});
+					</code></pre>
+				</section>
+				<section>
+					<h1>Debugging</h1>
+				</section>
+				<section data-background-image="images/typing.gif" >
+					<h1><span class="marked">#</span> demo</h1>
 				</section>
 				<section>
 					<h1>The Future</h1>
@@ -113,14 +181,28 @@ let greeter = new Greeter("world");
 				</section>
 				<section>
 					<ul>
-						<li><span class="mark">--</span> </li>
+						<li><span class="mark">--</span> Types
+							<ul>
+								<li><span>never</span></li>
+								<li><span>null</span></li>
+								<li><span>undefined</span></li>
+								<li><span>this {functions}</span></li>
+							</ul>
+						</li>
 						<li><span class="mark">--</span> More ... <a href="http://bit.ly/TsRoadmap">bit.ly/TsRoadmap</a></li>
 					</ul>
 				</section>
 				<section>
-					<h2>Ref</h2>
+					<h2>More</h2>
 					<ul>
 						<li><span class="mark">--</span> <a href="https://www.typescriptlang.org/" target="_blank">typescriptlang.org</a></li>
+					</ul>
+				</section>
+				<section class="text-right">
+					<h1><span class="marked">;)</span> Thanks!</h1>
+					<ul>
+						<li><span class="mark">--</span> bruno.lima@cesar.org.br</li>
+						<li><span class="mark">--</span> luiz.carlos@cesar.org.br</li>
 					</ul>
 				</section>
 			</div>
