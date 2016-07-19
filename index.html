@@ -1,0 +1,157 @@
+<!doctype html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+		<title>TypeScript: The JavaScript with Power-up</title>
+
+		<link rel="stylesheet" href="css/reveal.css">
+		<link rel="stylesheet" href="css/theme/cesar.css">
+
+		<!-- Theme used for syntax highlighting of code -->
+		<link rel="stylesheet" href="lib/css/tomorrow-night.css">
+
+		<!-- Printing and PDF exports -->
+		<script>
+			var link = document.createElement( 'link' );
+			link.rel = 'stylesheet';
+			link.type = 'text/css';
+			link.href = window.location.search.match( /print-pdf/gi ) ? 'css/print/pdf.css' : 'css/print/paper.css';
+			document.getElementsByTagName( 'head' )[0].appendChild( link );
+		</script>
+	</head>
+	<body>
+		<div class="reveal">
+			<div class="slides">
+				<section class="hero">
+					<h1><strong>Type</strong>Script</h1>
+					<h2>The JavaScript with Power-up</h2>
+				</section>
+				<section data-background-image="images/foto.jpg" data-background-position="left" data-background-size="contain" class="text-right">
+					<h3>Luiz Carlos</h3>
+					<p class="job-title">Engenheiro de Software<br><span>@ CESAR</span></p>
+					<h3>Bruno Lima</h3>
+					<p class="job-title">Front-end Developer<br><span>@ CESAR</span></p>
+				</section>
+				<section class="text-full-size">
+					<img src="images/ms-and-js.png" alt="Microsoft and JavaScript" class="plain" />
+				</section>
+				<section data-background-image="images/anders-hejlsberg.jpg" class="text-right">
+					<h2>Anders Hejlsberg</h2>
+					<ul>
+						<li><span class="mark">--</span> C#</li>
+						<li><span class="mark">--</span> Turbo Pascal</li>
+						<li><span class="mark">--</span> Delphi</li>
+					</ul>
+				</section>
+				<section>
+					<h1>2012</h1>
+					<h2>TypeScript --version <span class="marked">0.8</span></h2>
+				</section>
+				<section class="image-with-subtitle">
+					<img src="images/angular.svg" alt="Angular" class="plain">
+					<h3>Angular <span class="marked">2.0</span></h3>
+				</section>
+				<section>
+					<img src="images/vscode.svg" alt="VS Code" class="editors">
+					<img src="images/sublime-text.svg" alt="Sublime" class="editors">
+					<img src="images/atom.svg" alt="Atom" class="editors">
+					<img src="images/eclipse.svg" alt="Eclipse" class="editors">
+					<img src="images/emacs.svg" alt="emacs" class="editors">
+					<img src="images/icon_WebStorm.svg" alt="WebStorm" class="editors">
+					<img src="images/vim.svg" alt="Vim" class="editors">
+				</section>
+				<section>
+					<img src="images/set.svg" alt="Set TypeScript" class="plain" />
+				</section>
+				<section>
+					<h2>Install</h2>
+					<pre><code data-trim data-noescape class="bash">
+$ npm install -g typescript
+					</code></pre>
+				</section>
+				<section>
+					<h2>Compile</h2>
+					<pre><code data-trim data-noescape class="bash">
+$ tsc helloworld.ts
+					</code></pre>
+				</section>
+				<section>
+					<pre><code data-trim data-noescape class="typescript">
+class Greeter {
+    greeting: string;
+    constructor(message: string) {
+        this.greeting = message;
+    }
+    greet() {
+        return "Hello, " + this.greeting;
+    }
+}
+
+let greeter = new Greeter("world");
+					</code></pre>
+				</section>
+				<section>
+					<h1>Types</h1>
+				</section>
+				<section>
+					<h1>Tooling</h1>
+				</section>
+				<section>
+					<h1>Interfaces</h1>
+				</section>
+				<section>
+					<h1>Generics</h1>
+				</section>
+				<section>
+					<h1>The Future</h1>
+				</section>
+				<section>
+					<h1>2.0</h1>
+					<h2><span class="marked">beta</span></h2>
+				</section>
+				<section>
+					<ul>
+						<li><span class="mark">--</span> </li>
+						<li><span class="mark">--</span> More ... <a href="http://bit.ly/TsRoadmap">bit.ly/TsRoadmap</a></li>
+					</ul>
+				</section>
+				<section>
+					<h2>Ref</h2>
+					<ul>
+						<li><span class="mark">--</span> <a href="https://www.typescriptlang.org/" target="_blank">typescriptlang.org</a></li>
+					</ul>
+				</section>
+			</div>
+			<div class="tags">
+				#TypeScript<br>
+				#IntervaloCESAR
+			</div>
+			<a class="cesar" target="_blank" title="CESAR">CESAR</a>
+		</div>
+
+		<script src="lib/js/head.min.js"></script>
+		<script src="js/reveal.js"></script>
+
+		<script>
+			// More info https://github.com/hakimel/reveal.js#configuration
+			Reveal.initialize({
+				history: true,
+				controls: false,
+				transition: 'slide',
+				parallaxBackgroundImage: 'images/foreground_bluprint.png',
+				parallaxBackgroundSize: '2342px 510px',
+				parallaxBackgroundHorizontal: 50,
+
+				// More info https://github.com/hakimel/reveal.js#dependencies
+				dependencies: [
+					{ src: 'plugin/markdown/marked.js' },
+					{ src: 'plugin/markdown/markdown.js' },
+					{ src: 'plugin/notes/notes.js', async: true },
+					{ src: 'plugin/highlight/highlight.js', async: true, callback: function() { hljs.initHighlightingOnLoad(); } }
+				]
+			});
+		</script>
+	</body>
+</html>
